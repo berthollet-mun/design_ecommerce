@@ -58,31 +58,30 @@ ProductBox(
           TextComponents(txt: ProductName, fw: FontWeight.bold, txtSize: 18),
           SizedBox(height: 10.h),
           Container(
-            margin: EdgeInsets.only(left: 15.w, right: 15.w),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Flexible(
-                  child: Row(
+            margin: EdgeInsets.symmetric(horizontal: 8.w),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.star, color: Colors.deepOrange, size: 16.sp),
-                      Icon(Icons.star, color: Colors.deepOrange, size: 16.sp),
-                      Icon(Icons.star, color: Colors.deepOrange, size: 16.sp),
-                      Icon(Icons.star, color: Colors.deepOrange, size: 16.sp),
-                      Icon(Icons.star, color: Color(0xFFF2C1A6), size: 16.sp),
+                      Icon(Icons.star, color: Colors.deepOrange, size: 14.sp),
+                      Icon(Icons.star, color: Colors.deepOrange, size: 14.sp),
+                      Icon(Icons.star, color: Colors.deepOrange, size: 14.sp),
+                      Icon(Icons.star, color: Colors.deepOrange, size: 14.sp),
+                      Icon(Icons.star, color: Color(0xFFF2C1A6), size: 14.sp),
                     ],
                   ),
-                ),
-                SizedBox(width: 4.w),
-                Flexible(
-                  child: TextComponents(
+                  SizedBox(width: 6.w),
+                  TextComponents(
                     txt: ProductReview,
-                    txtSize: 12.sp,
+                    txtSize: 11.sp,
                     fw: FontWeight.bold,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           SizedBox(height: 15.h),
@@ -109,8 +108,8 @@ ProductBox(
           ),
           SizedBox(height: 10.h),
           Container(
-            height: 35,
-            margin: EdgeInsets.only(left: 15, right: 15),
+            height: 32.h,
+            margin: EdgeInsets.symmetric(horizontal: 8.w),
             child: ButtonComponents(
               txtButton: "Add to Cart",
               buttonColor: AppTheme.primaryColor,
