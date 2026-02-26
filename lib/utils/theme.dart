@@ -41,12 +41,10 @@ class AppTheme {
         primary: primaryColor,
         secondary: primaryLight,
         surface: cardLight,
-        background: lightBackground,
         error: error,
         onPrimary: Colors.white,
         onSecondary: Colors.white,
         onSurface: textPrimaryLight,
-        onBackground: textPrimaryLight,
         onError: Colors.white,
       ),
       scaffoldBackgroundColor: lightBackground,
@@ -119,17 +117,15 @@ class AppTheme {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: error, width: 1.5),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-        hintStyle: GoogleFonts.mulish(
-          fontSize: 14,
-          color: grey4,
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 16,
         ),
+        hintStyle: GoogleFonts.mulish(fontSize: 14, color: grey4),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         color: cardLight,
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -138,18 +134,22 @@ class AppTheme {
         unselectedItemColor: grey4,
         type: BottomNavigationBarType.fixed,
         elevation: 8,
-        selectedLabelStyle: GoogleFonts.mulish(fontSize: 12, fontWeight: FontWeight.w600),
+        selectedLabelStyle: GoogleFonts.mulish(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+        ),
         unselectedLabelStyle: GoogleFonts.mulish(fontSize: 12),
       ),
       chipTheme: ChipThemeData(
         backgroundColor: grey1,
         selectedColor: primaryColor,
         labelStyle: GoogleFonts.mulish(fontSize: 14),
-        secondaryLabelStyle: GoogleFonts.mulish(fontSize: 14, color: Colors.white),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+        secondaryLabelStyle: GoogleFonts.mulish(
+          fontSize: 14,
+          color: Colors.white,
         ),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
     );
   }
@@ -163,12 +163,10 @@ class AppTheme {
         primary: primaryColor,
         secondary: primaryLight,
         surface: cardDark,
-        background: darkBackground,
         error: error,
         onPrimary: Colors.white,
         onSecondary: Colors.white,
         onSurface: textPrimaryDark,
-        onBackground: textPrimaryDark,
         onError: Colors.white,
       ),
       scaffoldBackgroundColor: darkBackground,
@@ -228,17 +226,15 @@ class AppTheme {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: primaryColor, width: 1.5),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-        hintStyle: GoogleFonts.mulish(
-          fontSize: 14,
-          color: grey4,
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 16,
         ),
+        hintStyle: GoogleFonts.mulish(fontSize: 14, color: grey4),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         color: cardDark,
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -247,32 +243,99 @@ class AppTheme {
         unselectedItemColor: grey4,
         type: BottomNavigationBarType.fixed,
         elevation: 8,
-        selectedLabelStyle: GoogleFonts.mulish(fontSize: 12, fontWeight: FontWeight.w600),
+        selectedLabelStyle: GoogleFonts.mulish(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+        ),
         unselectedLabelStyle: GoogleFonts.mulish(fontSize: 12),
       ),
     );
   }
 
   static TextTheme _buildTextTheme(Brightness brightness) {
-    final color = brightness == Brightness.light ? textPrimaryLight : textPrimaryDark;
-    final secondaryColor = brightness == Brightness.light ? textSecondaryLight : textSecondaryDark;
+    final color = brightness == Brightness.light
+        ? textPrimaryLight
+        : textPrimaryDark;
+    final secondaryColor = brightness == Brightness.light
+        ? textSecondaryLight
+        : textSecondaryDark;
 
     return TextTheme(
-      displayLarge: GoogleFonts.mulish(fontSize: 57, fontWeight: FontWeight.w400, color: color),
-      displayMedium: GoogleFonts.mulish(fontSize: 45, fontWeight: FontWeight.w400, color: color),
-      displaySmall: GoogleFonts.mulish(fontSize: 36, fontWeight: FontWeight.w400, color: color),
-      headlineLarge: GoogleFonts.mulish(fontSize: 32, fontWeight: FontWeight.w700, color: color),
-      headlineMedium: GoogleFonts.mulish(fontSize: 28, fontWeight: FontWeight.w600, color: color),
-      headlineSmall: GoogleFonts.mulish(fontSize: 24, fontWeight: FontWeight.w600, color: color),
-      titleLarge: GoogleFonts.mulish(fontSize: 22, fontWeight: FontWeight.w600, color: color),
-      titleMedium: GoogleFonts.mulish(fontSize: 16, fontWeight: FontWeight.w600, color: color),
-      titleSmall: GoogleFonts.mulish(fontSize: 14, fontWeight: FontWeight.w600, color: color),
-      bodyLarge: GoogleFonts.mulish(fontSize: 16, fontWeight: FontWeight.w400, color: color),
-      bodyMedium: GoogleFonts.mulish(fontSize: 14, fontWeight: FontWeight.w400, color: color),
-      bodySmall: GoogleFonts.mulish(fontSize: 12, fontWeight: FontWeight.w400, color: secondaryColor),
-      labelLarge: GoogleFonts.mulish(fontSize: 14, fontWeight: FontWeight.w600, color: color),
-      labelMedium: GoogleFonts.mulish(fontSize: 12, fontWeight: FontWeight.w600, color: color),
-      labelSmall: GoogleFonts.mulish(fontSize: 11, fontWeight: FontWeight.w600, color: secondaryColor),
+      displayLarge: GoogleFonts.mulish(
+        fontSize: 57,
+        fontWeight: FontWeight.w400,
+        color: color,
+      ),
+      displayMedium: GoogleFonts.mulish(
+        fontSize: 45,
+        fontWeight: FontWeight.w400,
+        color: color,
+      ),
+      displaySmall: GoogleFonts.mulish(
+        fontSize: 36,
+        fontWeight: FontWeight.w400,
+        color: color,
+      ),
+      headlineLarge: GoogleFonts.mulish(
+        fontSize: 32,
+        fontWeight: FontWeight.w700,
+        color: color,
+      ),
+      headlineMedium: GoogleFonts.mulish(
+        fontSize: 28,
+        fontWeight: FontWeight.w600,
+        color: color,
+      ),
+      headlineSmall: GoogleFonts.mulish(
+        fontSize: 24,
+        fontWeight: FontWeight.w600,
+        color: color,
+      ),
+      titleLarge: GoogleFonts.mulish(
+        fontSize: 22,
+        fontWeight: FontWeight.w600,
+        color: color,
+      ),
+      titleMedium: GoogleFonts.mulish(
+        fontSize: 16,
+        fontWeight: FontWeight.w600,
+        color: color,
+      ),
+      titleSmall: GoogleFonts.mulish(
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+        color: color,
+      ),
+      bodyLarge: GoogleFonts.mulish(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+        color: color,
+      ),
+      bodyMedium: GoogleFonts.mulish(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: color,
+      ),
+      bodySmall: GoogleFonts.mulish(
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
+        color: secondaryColor,
+      ),
+      labelLarge: GoogleFonts.mulish(
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+        color: color,
+      ),
+      labelMedium: GoogleFonts.mulish(
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+        color: color,
+      ),
+      labelSmall: GoogleFonts.mulish(
+        fontSize: 11,
+        fontWeight: FontWeight.w600,
+        color: secondaryColor,
+      ),
     );
   }
 }

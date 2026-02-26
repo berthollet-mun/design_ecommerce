@@ -17,9 +17,8 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(backgroundColor: AppTheme.lightBackground, elevation: 0),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 40.h),
           color: AppTheme.lightBackground,
-          height: ScreenUtil().screenHeight - 100.h,
           width: ScreenUtil().screenWidth,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

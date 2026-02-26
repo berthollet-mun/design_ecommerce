@@ -4,8 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../utils/theme.dart';
 import '../../../components/button_components.dart';
 import '../../../components/form_components.dart';
+import '../../../components/space.dart';
 import '../../../components/text_components.dart';
-import '../../welcome/view/welcome.dart';
+import '../../changeState/view/ChangeState.dart';
 
 class ChangePassword extends StatefulWidget {
   const ChangePassword({super.key});

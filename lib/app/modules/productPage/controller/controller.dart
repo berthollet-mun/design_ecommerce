@@ -58,23 +58,29 @@ ProductBox(
           TextComponents(txt: ProductName, fw: FontWeight.bold, txtSize: 18),
           SizedBox(height: 10.h),
           Container(
-            margin: EdgeInsets.only(left: 15, right: 15),
+            margin: EdgeInsets.only(left: 15.w, right: 15.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Icon(Icons.star, color: Colors.deepOrange, size: 20),
-                    Icon(Icons.star, color: Colors.deepOrange, size: 20),
-                    Icon(Icons.star, color: Colors.deepOrange, size: 20),
-                    Icon(Icons.star, color: Colors.deepOrange, size: 20),
-                    Icon(Icons.star, color: Color(0xFFF2C1A6), size: 20),
-                  ],
+                Flexible(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.star, color: Colors.deepOrange, size: 16.sp),
+                      Icon(Icons.star, color: Colors.deepOrange, size: 16.sp),
+                      Icon(Icons.star, color: Colors.deepOrange, size: 16.sp),
+                      Icon(Icons.star, color: Colors.deepOrange, size: 16.sp),
+                      Icon(Icons.star, color: Color(0xFFF2C1A6), size: 16.sp),
+                    ],
+                  ),
                 ),
-                TextComponents(
-                  txt: ProductReview,
-                  txtSize: 15,
-                  fw: FontWeight.bold,
+                SizedBox(width: 4.w),
+                Flexible(
+                  child: TextComponents(
+                    txt: ProductReview,
+                    txtSize: 12.sp,
+                    fw: FontWeight.bold,
+                  ),
                 ),
               ],
             ),

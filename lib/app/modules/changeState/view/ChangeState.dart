@@ -18,39 +18,43 @@ class _ChangeStateState extends State<ChangeState> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: Container(
-          padding: EdgeInsets.only(left: 20, right: 20),
-          height: MediaQuery.of(context).size.height / 2,
-          width: MediaQuery.of(context).size.width,
-          child: Column(
-            children: [
-              Icon(Icons.check_circle, color: Colors.green, size: 150),
-              SizedBox(height: 20),
-              TextComponents(
-                txt: "Congratulations !",
-                fw: FontWeight.bold,
-                txtSize: 28,
-              ),
-              TextComponents(
-                txt: "Your account has been successfuly\ncreated",
-                txtSize: 20,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 20),
-              InkWell(
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => Welcome()),
-                  );
-                },
-                child: ButtonComponents(
-                  txtButton: "Continue Shopping",
-                  buttonColor: AppTheme.primaryColor,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: 60.h),
+                Icon(Icons.check_circle, color: Colors.green, size: 120.sp),
+                SizedBox(height: 30.h),
+                TextComponents(
+                  txt: "Congratulations!",
+                  fw: FontWeight.bold,
+                  txtSize: 28.sp,
                 ),
-              ),
-            ],
+                SizedBox(height: 16.h),
+                TextComponents(
+                  txt: "Your account has been successfully\ncreated",
+                  txtSize: 18.sp,
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 40.h),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Welcome()),
+                    );
+                  },
+                  child: ButtonComponents(
+                    txtButton: "Continue Shopping",
+                    buttonColor: AppTheme.primaryColor,
+                  ),
+                ),
+                SizedBox(height: 40.h),
+              ],
+            ),
           ),
         ),
       ),

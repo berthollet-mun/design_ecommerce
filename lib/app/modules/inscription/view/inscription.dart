@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../utils/theme.dart';
 import '../../../components/button_components.dart';
 import '../../../components/form_components.dart';
+import '../../../components/space.dart';
 import '../../../components/text_components.dart';
 
 class Inscription extends StatefulWidget {
@@ -61,34 +62,62 @@ class _InscriptionState extends State<Inscription> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(height: 1, width: 120, color: Colors.black38),
-                  TextComponents(txt: "Or Continue with"),
-                  Container(height: 1, width: 120, color: Colors.black38),
+                  Expanded(child: Container(height: 1, color: Colors.black38)),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 12.w),
+                    child: TextComponents(txt: "Or Continue with"),
+                  ),
+                  Expanded(child: Container(height: 1, color: Colors.black38)),
                 ],
               ),
-
               h(20),
               Row(
                 children: [
                   Expanded(
                     child: Container(
-                      height: 60,
+                      height: 48.h,
                       decoration: BoxDecoration(
                         border: Border.all(color: AppTheme.primaryColor),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(10.r),
                       ),
-                      child: Center(child: TextComponents(txt: "Google")),
+                      child: Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.g_mobiledata,
+                              color: AppTheme.primaryColor,
+                              size: 24.sp,
+                            ),
+                            SizedBox(width: 8.w),
+                            TextComponents(txt: "Google"),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                  SizedBox(width: 20),
+                  SizedBox(width: 12.w),
                   Expanded(
                     child: Container(
-                      height: 60,
+                      height: 48.h,
                       decoration: BoxDecoration(
                         border: Border.all(color: AppTheme.primaryColor),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(10.r),
                       ),
-                      child: Center(child: TextComponents(txt: "Google")),
+                      child: Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.facebook,
+                              color: AppTheme.primaryColor,
+                              size: 24.sp,
+                            ),
+                            SizedBox(width: 8.w),
+                            TextComponents(txt: "Facebook"),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ],

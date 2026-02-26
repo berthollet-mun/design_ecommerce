@@ -1,28 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-/// Extension for responsive sizing
-extension ResponsiveSize on num {
-  /// Adaptive width
-  double get w => ScreenUtil().setWidth(this);
-
-  /// Adaptive height
-  double get h => ScreenUtil().setHeight(this);
-
-  /// Adaptive font size
-  double get sp => ScreenUtil().setSp(this);
-
-  /// Adaptive radius
-  double get r => ScreenUtil().radius(this);
-
-  /// Adaptive square size (width-based)
-  double get sw => ScreenUtil().setWidth(this);
-
-  /// Adaptive square size (height-based)
-  double get sh => ScreenUtil().setHeight(this);
-}
-
 /// Screen utilities for responsive design
+/// Note: .w, .h, .sp, .r extensions are provided by flutter_screenutil
 class AppSizes {
   // Padding
   static double get paddingXS => 4.w;
@@ -71,7 +51,8 @@ class AppSizes {
   static bool isMobile(BuildContext context) => ScreenUtil().screenWidth < 600;
   static bool isTablet(BuildContext context) =>
       ScreenUtil().screenWidth >= 600 && ScreenUtil().screenWidth < 1024;
-  static bool isDesktop(BuildContext context) => ScreenUtil().screenWidth >= 1024;
+  static bool isDesktop(BuildContext context) =>
+      ScreenUtil().screenWidth >= 1024;
 
   // Grid configurations
   static int getGridCrossAxisCount(BuildContext context) {
