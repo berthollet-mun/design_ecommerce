@@ -1,7 +1,9 @@
-import 'package:e_commerce/app/components/space.dart';
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
+import '../../components/space.dart';
+import '../../components/text_components.dart';
 
 CustomProductBox(String productName, description, price) {
   return Column(
@@ -51,21 +53,21 @@ CustomProductBox(String productName, description, price) {
                             height: 20,
                             width: 20,
                             decoration: BoxDecoration(
-                              color: homeBg,
+                              color: AppTheme.lightBackground,
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Center(child: Icon(Icons.remove, size: 15)),
                           ),
                         ),
-                        w(10),
+                        SizedBox(width: 10.w),
                         TextComponents(txt: "01"),
-                        w(10),
+                        SizedBox(width: 10.w),
                         InkWell(
                           child: Container(
                             height: 20,
                             width: 20,
                             decoration: BoxDecoration(
-                              color: homeBg,
+                              color: AppTheme.lightBackground,
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Center(child: Icon(Icons.add, size: 15)),
@@ -80,7 +82,7 @@ CustomProductBox(String productName, description, price) {
           ),
         ],
       ),
-      h(15),
+      SizedBox(height: 15.h),
       Divider(),
     ],
   );

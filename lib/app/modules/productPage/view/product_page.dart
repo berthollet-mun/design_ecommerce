@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../utils/theme.dart';
-import '../../../components/space.dart';
 import '../../../components/text_components.dart';
 import '../../filter/view/filter.dart';
 import '../controller/controller.dart';
@@ -37,8 +36,8 @@ class _ProductPageState extends State<ProductPage> {
                   height: 60,
                   width: MediaQuery.of(context).size.width / 1.4,
                   decoration: BoxDecoration(
-                    color: greyColor,
-                    borderRadius: BorderRadius.circular(100),
+                    color: AppTheme.grey1,
+                    borderRadius: BorderRadius.circular(100.r),
                   ),
                   child: TextFormField(
                     decoration: InputDecoration(
@@ -61,8 +60,8 @@ class _ProductPageState extends State<ProductPage> {
                     );
                   },
                   child: CircleAvatar(
-                    backgroundColor: greyColor,
-                    radius: 30,
+                    backgroundColor: AppTheme.grey1,
+                    radius: 30.r,
                     child: Center(
                       child: Icon(Icons.shopping_bag_outlined, size: 30),
                     ),
@@ -70,7 +69,7 @@ class _ProductPageState extends State<ProductPage> {
                 ),
               ],
             ),
-            h(40),
+            SizedBox(height: 40.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -87,9 +86,9 @@ class _ProductPageState extends State<ProductPage> {
                         padding: EdgeInsets.only(left: 30, right: 30),
                         height: 40,
                         decoration: BoxDecoration(
-                          color: isMan ? mainColor : Colors.white,
-                          border: Border.all(color: mainColor),
-                          borderRadius: BorderRadius.circular(100),
+                          color: isMan ? AppTheme.primaryColor : Colors.white,
+                          border: Border.all(color: AppTheme.primaryColor),
+                          borderRadius: BorderRadius.circular(100.r),
                         ),
                         child: Center(
                           child: TextComponents(
@@ -100,7 +99,7 @@ class _ProductPageState extends State<ProductPage> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 20),
+                    SizedBox(width: 20.w),
                     InkWell(
                       onTap: () {
                         setState(() {
@@ -112,9 +111,9 @@ class _ProductPageState extends State<ProductPage> {
                         padding: EdgeInsets.only(left: 30, right: 30),
                         height: 40,
                         decoration: BoxDecoration(
-                          color: isKids ? mainColor : Colors.white,
-                          border: Border.all(color: mainColor),
-                          borderRadius: BorderRadius.circular(100),
+                          color: isKids ? AppTheme.primaryColor : Colors.white,
+                          border: Border.all(color: AppTheme.primaryColor),
+                          borderRadius: BorderRadius.circular(100.r),
                         ),
                         child: Center(
                           child: TextComponents(
@@ -138,19 +137,19 @@ class _ProductPageState extends State<ProductPage> {
                 ),
               ],
             ),
-            h(30),
+            SizedBox(height: 30.h),
             Container(
               height: 180,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: greyColor2,
-                borderRadius: BorderRadius.circular(20),
+                color: AppTheme.grey2,
+                borderRadius: BorderRadius.circular(20.r),
                 // image: DecorationImage(
                 //   image: AssetImage("assets/images/logo.png"),
                 // ),
               ),
             ),
-            h(20),
+            SizedBox(height: 20.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -162,12 +161,12 @@ class _ProductPageState extends State<ProductPage> {
                 TextComponents(
                   txt: "See all ",
                   fw: FontWeight.bold,
-                  color: mainColor,
+                  color: AppTheme.primaryColor,
                   txtSize: 17,
                 ),
               ],
             ),
-            h(20),
+            SizedBox(height: 20.h),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -184,14 +183,14 @@ class _ProductPageState extends State<ProductPage> {
                 ],
               ),
             ),
-            h(20),
+            SizedBox(height: 20.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 TextComponents(txt: "All Product", fw: FontWeight.bold),
               ],
             ),
-            h(20),
+            SizedBox(height: 20.h),
             Wrap(
               spacing: 8,
               runSpacing: 8,

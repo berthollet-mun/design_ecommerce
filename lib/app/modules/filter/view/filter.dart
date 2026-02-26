@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../utils/theme.dart';
 import '../../../components/button_components.dart';
-import '../../../components/space.dart';
 import '../../../components/text_components.dart';
 
 class Filter extends StatefulWidget {
@@ -47,15 +46,18 @@ class _FilterState extends State<Filter> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: TextComponents(txt: "Filter", fw: FontWeight.bold, txtSize: 19),
-        actions: [Icon(Icons.delete), w(15)],
+        actions: [
+          Icon(Icons.delete),
+          SizedBox(width: 15.w),
+        ],
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TextComponents(txt: "Brands", fw: FontWeight.bold, txtSize: 18),
-            h(10),
+            TextComponents(txt: "Brands", fw: FontWeight.bold, txtSize: 18.sp),
+            SizedBox(height: 10.h),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -72,9 +74,9 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: all ? mainColor : Colors.white,
+                        color: all ? AppTheme.primaryColor : Colors.white,
                         border: Border.all(color: Colors.black12),
-                        borderRadius: BorderRadius.circular(100),
+                        borderRadius: BorderRadius.circular(100.r),
                       ),
                       child: Center(
                         child: TextComponents(
@@ -86,7 +88,7 @@ class _FilterState extends State<Filter> {
                       ),
                     ),
                   ),
-                  w(10),
+                  SizedBox(width: 10.w),
                   InkWell(
                     onTap: () {
                       setState(() {
@@ -98,7 +100,7 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: nike ? mainColor : Colors.white,
+                        color: nike ? AppTheme.primaryColor : Colors.white,
                         border: Border.all(color: Colors.black12),
                         borderRadius: BorderRadius.circular(100),
                       ),
@@ -111,7 +113,7 @@ class _FilterState extends State<Filter> {
                       ),
                     ),
                   ),
-                  w(10),
+                  SizedBox(width: 10.w),
                   InkWell(
                     onTap: () {
                       setState(() {
@@ -123,7 +125,7 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: bata ? mainColor : Colors.white,
+                        color: bata ? AppTheme.primaryColor : Colors.white,
                         border: Border.all(color: Colors.black12),
                         borderRadius: BorderRadius.circular(100),
                       ),
@@ -136,7 +138,7 @@ class _FilterState extends State<Filter> {
                       ),
                     ),
                   ),
-                  w(10),
+                  SizedBox(width: 10.w),
                   InkWell(
                     onTap: () {
                       setState(() {
@@ -148,7 +150,7 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: adidas ? mainColor : Colors.white,
+                        color: adidas ? AppTheme.primaryColor : Colors.white,
                         border: Border.all(color: Colors.black12),
                         borderRadius: BorderRadius.circular(100),
                       ),
@@ -165,10 +167,10 @@ class _FilterState extends State<Filter> {
               ),
             ),
 
-            h(10),
+            SizedBox(height: 10.h),
 
-            TextComponents(txt: "Gender", fw: FontWeight.bold, txtSize: 18),
-            h(10),
+            TextComponents(txt: "Gender", fw: FontWeight.bold, txtSize: 18.sp),
+            SizedBox(height: 10.h),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -185,7 +187,7 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: allGender ? mainColor : Colors.white,
+                        color: allGender ? AppTheme.primaryColor : Colors.white,
                         border: Border.all(color: Colors.black12),
                         borderRadius: BorderRadius.circular(100),
                       ),
@@ -199,7 +201,7 @@ class _FilterState extends State<Filter> {
                       ),
                     ),
                   ),
-                  w(10),
+                  SizedBox(width: 10.w),
                   InkWell(
                     onTap: () {
                       setState(() {
@@ -211,7 +213,7 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: menGender ? mainColor : Colors.white,
+                        color: menGender ? AppTheme.primaryColor : Colors.white,
                         border: Border.all(color: Colors.black12),
                         borderRadius: BorderRadius.circular(100),
                       ),
@@ -224,7 +226,7 @@ class _FilterState extends State<Filter> {
                       ),
                     ),
                   ),
-                  w(10),
+                  SizedBox(width: 10.w),
                   InkWell(
                     onTap: () {
                       setState(() {
@@ -236,7 +238,9 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: kidsGender ? mainColor : Colors.white,
+                        color: kidsGender
+                            ? AppTheme.primaryColor
+                            : Colors.white,
                         border: Border.all(color: Colors.black12),
                         borderRadius: BorderRadius.circular(100),
                       ),
@@ -252,13 +256,13 @@ class _FilterState extends State<Filter> {
                 ],
               ),
             ),
-            h(10),
+            SizedBox(height: 10.h),
             TextComponents(
               txt: "Select Product",
               fw: FontWeight.bold,
               txtSize: 18,
             ),
-            h(10),
+            SizedBox(height: 10.h),
             Container(
               padding: EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
@@ -289,13 +293,13 @@ class _FilterState extends State<Filter> {
                 },
               ),
             ),
-            h(10),
+            SizedBox(height: 10.h),
             TextComponents(
               txt: "Select Size",
               fw: FontWeight.bold,
               txtSize: 18,
             ),
-            h(10),
+            SizedBox(height: 10.h),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -312,7 +316,7 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: allSize ? mainColor : Colors.white,
+                        color: allSize ? AppTheme.primaryColor : Colors.white,
                         border: Border.all(color: Colors.black12),
                         borderRadius: BorderRadius.circular(100),
                       ),
@@ -326,7 +330,7 @@ class _FilterState extends State<Filter> {
                       ),
                     ),
                   ),
-                  w(10),
+                  SizedBox(width: 10.w),
                   InkWell(
                     onTap: () {
                       setState(() {
@@ -338,7 +342,7 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: size1 ? mainColor : Colors.white,
+                        color: size1 ? AppTheme.primaryColor : Colors.white,
                         border: Border.all(color: Colors.black12),
                         borderRadius: BorderRadius.circular(100),
                       ),
@@ -351,7 +355,7 @@ class _FilterState extends State<Filter> {
                       ),
                     ),
                   ),
-                  w(10),
+                  SizedBox(width: 10.w),
                   InkWell(
                     onTap: () {
                       setState(() {
@@ -363,7 +367,7 @@ class _FilterState extends State<Filter> {
                       padding: EdgeInsets.only(left: 20, right: 20),
                       height: 40,
                       decoration: BoxDecoration(
-                        color: size2 ? mainColor : Colors.white,
+                        color: size2 ? AppTheme.primaryColor : Colors.white,
                         border: Border.all(color: Colors.black12),
                         borderRadius: BorderRadius.circular(100),
                       ),
@@ -379,8 +383,8 @@ class _FilterState extends State<Filter> {
                 ],
               ),
             ),
-            h(10),
-            TextComponents(txt: "Price", fw: FontWeight.bold, txtSize: 18),
+            SizedBox(height: 10.h),
+            TextComponents(txt: "Price", fw: FontWeight.bold, txtSize: 18.sp),
 
             Slider(
               min: 0,
@@ -399,36 +403,36 @@ class _FilterState extends State<Filter> {
             TextComponents(
               txt: "Select Color",
               fw: FontWeight.bold,
-              txtSize: 18,
+              txtSize: 18.sp,
             ),
-            h(10),
+            SizedBox(height: 10.h),
 
             Row(
               children: [
-                CircleAvatar(backgroundColor: Colors.brown, radius: 15),
-                w(10),
+                CircleAvatar(backgroundColor: Colors.brown, radius: 15.r),
+                SizedBox(width: 10.w),
 
-                CircleAvatar(backgroundColor: Colors.grey, radius: 15),
-                w(10),
+                CircleAvatar(backgroundColor: Colors.grey, radius: 15.r),
+                SizedBox(width: 10.w),
 
-                CircleAvatar(backgroundColor: Colors.blue, radius: 15),
-                w(10),
+                CircleAvatar(backgroundColor: Colors.blue, radius: 15.r),
+                SizedBox(width: 10.w),
 
-                CircleAvatar(backgroundColor: Colors.green, radius: 15),
-                w(10),
+                CircleAvatar(backgroundColor: Colors.green, radius: 15.r),
+                SizedBox(width: 10.w),
 
-                CircleAvatar(backgroundColor: Colors.orange, radius: 15),
-                w(10),
+                CircleAvatar(backgroundColor: Colors.orange, radius: 15.r),
+                SizedBox(width: 10.w),
 
-                CircleAvatar(backgroundColor: Colors.red, radius: 15),
+                CircleAvatar(backgroundColor: Colors.red, radius: 15.r),
               ],
             ),
-            h(20),
+            SizedBox(height: 20.h),
             InkWell(
               onTap: () {},
               child: ButtonComponents(
                 txtButton: "Filter Now",
-                buttonColor: mainColor,
+                buttonColor: AppTheme.primaryColor,
               ),
             ),
           ],

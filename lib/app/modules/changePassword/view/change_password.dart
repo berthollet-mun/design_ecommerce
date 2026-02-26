@@ -1,10 +1,11 @@
-import 'package:e_commerce/app/components/button_components.dart';
-import 'package:e_commerce/app/components/form_components.dart';
-import 'package:e_commerce/app/components/space.dart';
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/app/modules/changeState/view/ChangeState.dart';
-import 'package:e_commerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
+import '../../../components/button_components.dart';
+import '../../../components/form_components.dart';
+import '../../../components/text_components.dart';
+import '../../welcome/view/welcome.dart';
 
 class ChangePassword extends StatefulWidget {
   const ChangePassword({super.key});
@@ -86,7 +87,7 @@ class _ChangePasswordState extends State<ChangePassword> {
               },
               child: ButtonComponents(
                 txtButton: "Save",
-                buttonColor: mainColor,
+                buttonColor: AppTheme.primaryColor,
               ),
             ),
           ],

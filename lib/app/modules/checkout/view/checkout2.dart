@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../utils/theme.dart';
-import '../../../components/button_components.dart';
-import '../../../components/form_components.dart';
-import '../../../components/space.dart';
 import '../../../components/text_components.dart';
 import '../controller/controller.dart';
 
@@ -39,19 +36,19 @@ class _Checkout2State extends State<Checkout2> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(20.w),
         child: Column(
           children: [
             ProgressBar(setActuel: 2),
-            h(20),
+            SizedBox(height: 20.h),
             TextComponents(
-              txt: "Select Payement Methods",
+              txt: "Select Payment Methods",
               fw: FontWeight.bold,
-              txtSize: 18,
+              txtSize: 18.sp,
             ),
-            h(30),
+            SizedBox(height: 30.h),
             SizedBox(
-              height: 400,
+              height: 400.h,
               child: ListView.builder(
                 itemCount: methodePaiement.length,
                 itemBuilder: (context, index) {
@@ -60,9 +57,9 @@ class _Checkout2State extends State<Checkout2> {
                       ListTile(
                         title: TextComponents(txt: methodePaiement[index]),
                         leading: Container(
-                          height: 40,
-                          width: 40,
-                          color: greyColor2,
+                          height: 40.h,
+                          width: 40.w,
+                          color: AppTheme.grey2,
                         ),
                       ),
                     ],

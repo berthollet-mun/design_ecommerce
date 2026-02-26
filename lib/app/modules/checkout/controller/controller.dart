@@ -1,10 +1,13 @@
-import 'package:e_commerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
 
 class ProgressBar extends StatelessWidget {
-  ProgressBar({super.key, required this.setActuel});
+  final int setActuel;
 
-  int setActuel;
+  const ProgressBar({super.key, required this.setActuel});
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -13,14 +16,21 @@ class ProgressBar extends StatelessWidget {
         return Row(
           children: [
             Container(
-              height: 30,
-              width: 30,
+              height: 30.h,
+              width: 30.w,
               decoration: BoxDecoration(
-                color: index < setActuel ? mainColor : homeBg,
-                borderRadius: BorderRadius.circular(20),
+                color: index < setActuel
+                    ? AppTheme.primaryColor
+                    : AppTheme.lightBackground,
+                borderRadius: BorderRadius.circular(20.r),
               ),
             ),
-            if (index < 3) Container(height: 2, width: 50, color: homeBg),
+            if (index < 3)
+              Container(
+                height: 2.h,
+                width: 50.w,
+                color: AppTheme.lightBackground,
+              ),
           ],
         );
       }),

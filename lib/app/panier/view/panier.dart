@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../utils/theme.dart';
 import '../../components/button_components.dart';
-import '../../components/space.dart';
 import '../../components/text_components.dart';
 import '../../modules/checkout/view/checkout.dart';
 import '../controller/controller.dart';
@@ -29,7 +28,7 @@ class _PannierState extends State<Pannier> {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: homeBg,
+                  color: AppTheme.lightBackground,
                   borderRadius: BorderRadius.circular(100),
                 ),
                 child: Icon(Icons.shopping_cart, size: 30),
@@ -55,7 +54,7 @@ class _PannierState extends State<Pannier> {
               ),
             ],
           ),
-          w(10),
+          SizedBox(width: 10.w),
         ],
       ),
       body: SingleChildScrollView(
@@ -78,7 +77,7 @@ class _PannierState extends State<Pannier> {
               "Tk 800",
             ),
 
-            h(50),
+            SizedBox(height: 50.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -86,7 +85,7 @@ class _PannierState extends State<Pannier> {
                 TextComponents(txt: "Tk 2300", fw: FontWeight.bold),
               ],
             ),
-            h(10),
+            SizedBox(height: 10.h),
             InkWell(
               onTap: () {
                 Navigator.push(
@@ -96,7 +95,7 @@ class _PannierState extends State<Pannier> {
               },
               child: ButtonComponents(
                 txtButton: "Checkout",
-                buttonColor: mainColor,
+                buttonColor: AppTheme.primaryColor,
               ),
             ),
           ],

@@ -1,9 +1,11 @@
+import 'package:ecommerce/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../utils/theme.dart';
 import '../../../components/button_components.dart';
 import '../../../components/form_components.dart';
+import '../../../components/space.dart';
 import '../../../components/text_components.dart';
 import '../../motDepasseOublier/view/forgot_password.dart';
 
@@ -63,14 +65,17 @@ class _LoginState extends State<Login> {
                     },
                     child: TextComponents(
                       txt: "Forgot password",
-                      color: mainColor,
+                      color: AppTheme.primaryColor,
                       fw: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
               h(20),
-              ButtonComponents(txtButton: "Login", buttonColor: mainColor),
+              ButtonComponents(
+                txtButton: "Login",
+                buttonColor: AppTheme.primaryColor,
+              ),
               h(80),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -88,7 +93,7 @@ class _LoginState extends State<Login> {
                     child: Container(
                       height: 60,
                       decoration: BoxDecoration(
-                        border: Border.all(color: mainColor),
+                        border: Border.all(color: AppTheme.primaryColor),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(child: TextComponents(txt: "Google")),
@@ -99,7 +104,7 @@ class _LoginState extends State<Login> {
                     child: Container(
                       height: 60,
                       decoration: BoxDecoration(
-                        border: Border.all(color: mainColor),
+                        border: Border.all(color: AppTheme.primaryColor),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(child: TextComponents(txt: "Google")),
@@ -119,7 +124,7 @@ class _LoginState extends State<Login> {
                   TextComponents(
                     txt: "Sign up",
                     fw: FontWeight.bold,
-                    color: mainColor,
+                    color: AppTheme.primaryColor,
                   ),
                 ],
               ),

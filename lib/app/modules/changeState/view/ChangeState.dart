@@ -1,8 +1,10 @@
-import 'package:e_commerce/app/components/button_components.dart';
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/app/modules/welcome/view/welcome.dart';
-import 'package:e_commerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
+import '../../../components/button_components.dart';
+import '../../../components/text_components.dart';
+import '../../welcome/view/welcome.dart';
 
 class ChangeState extends StatefulWidget {
   const ChangeState({super.key});
@@ -45,7 +47,7 @@ class _ChangeStateState extends State<ChangeState> {
                 },
                 child: ButtonComponents(
                   txtButton: "Continue Shopping",
-                  buttonColor: mainColor,
+                  buttonColor: AppTheme.primaryColor,
                 ),
               ),
             ],

@@ -1,9 +1,12 @@
-import 'package:e_commerce/app/components/button_components.dart';
-import 'package:e_commerce/app/components/space.dart';
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/app/modules/changePassword/view/change_password.dart';
-import 'package:e_commerce/utils/colors.dart';
+import 'package:ecommerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
+import '../../../components/button_components.dart';
+import '../../../components/space.dart';
+import '../../../components/text_components.dart';
+import '../../changePassword/view/change_password.dart';
 
 class OTP extends StatefulWidget {
   const OTP({super.key});
@@ -75,7 +78,7 @@ class _OTPState extends State<OTP> {
                 margin: EdgeInsets.only(left: 20, right: 20),
                 child: ButtonComponents(
                   txtButton: "Verify",
-                  buttonColor: mainColor,
+                  buttonColor: AppTheme.primaryColor,
                 ),
               ),
             ),

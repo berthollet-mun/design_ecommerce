@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-h(double h) {
-  return SizedBox(height: h);
-}
+Widget h(double height) => SizedBox(height: height.h);
 
-w(double w) {
-  return SizedBox(width: w);
-}
+Widget w(double width) => SizedBox(width: width.w);

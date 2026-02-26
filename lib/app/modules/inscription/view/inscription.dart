@@ -53,7 +53,10 @@ class _InscriptionState extends State<Inscription> {
               ),
 
               h(20),
-              ButtonComponents(txtButton: "Sign Up", buttonColor: mainColor),
+              ButtonComponents(
+                txtButton: "Sign Up",
+                buttonColor: AppTheme.primaryColor,
+              ),
               h(40),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -71,7 +74,7 @@ class _InscriptionState extends State<Inscription> {
                     child: Container(
                       height: 60,
                       decoration: BoxDecoration(
-                        border: Border.all(color: mainColor),
+                        border: Border.all(color: AppTheme.primaryColor),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(child: TextComponents(txt: "Google")),
@@ -82,7 +85,7 @@ class _InscriptionState extends State<Inscription> {
                     child: Container(
                       height: 60,
                       decoration: BoxDecoration(
-                        border: Border.all(color: mainColor),
+                        border: Border.all(color: AppTheme.primaryColor),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(child: TextComponents(txt: "Google")),

@@ -1,11 +1,14 @@
-import 'package:e_commerce/app/components/button_components.dart';
-import 'package:e_commerce/app/components/form_components.dart';
-import 'package:e_commerce/app/components/space.dart';
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/app/modules/connexion/view/login.dart';
-import 'package:e_commerce/app/modules/opt/view/opt.dart';
-import 'package:e_commerce/utils/colors.dart';
+import 'package:ecommerce/app/components/space.dart';
+import 'package:ecommerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
+import '../../../components/button_components.dart';
+import '../../../components/form_components.dart';
+import '../../../components/text_components.dart';
+import '../../connexion/view/login.dart';
+import '../../opt/view/opt.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
@@ -59,7 +62,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 },
                 child: ButtonComponents(
                   txtButton: "Send",
-                  buttonColor: mainColor,
+                  buttonColor: AppTheme.primaryColor,
                 ),
               ),
               h(20),

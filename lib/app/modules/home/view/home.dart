@@ -6,7 +6,6 @@ import '../../../main_screen.dart';
 import '../../connexion/view/login.dart';
 import '../../inscription/view/inscription.dart';
 import '../../../components/button_components.dart';
-import '../../../components/space.dart';
 import '../../../components/text_components.dart';
 
 class HomePage extends StatelessWidget {
