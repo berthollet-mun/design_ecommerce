@@ -1,5 +1,7 @@
-import 'package:e_commerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../utils/theme.dart';
 
 class ButtonComponents extends StatelessWidget {
   const ButtonComponents({
@@ -14,16 +16,20 @@ class ButtonComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      width: MediaQuery.of(context).size.width,
+      height: 50.h,
+      width: double.infinity,
       decoration: BoxDecoration(
-        color: buttonColor ?? mainColor,
-        borderRadius: BorderRadius.circular(7),
+        color: buttonColor ?? AppTheme.primaryColor,
+        borderRadius: BorderRadius.circular(12.r),
       ),
       child: Center(
         child: Text(
           txtButton,
-          style: TextStyle(color: Colors.white, fontSize: 17),
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16.sp,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
     );

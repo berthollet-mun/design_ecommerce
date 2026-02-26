@@ -1,10 +1,13 @@
-import 'package:e_commerce/app/components/button_components.dart';
-import 'package:e_commerce/app/components/space.dart';
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/app/modules/connexion/view/login.dart';
-import 'package:e_commerce/app/modules/inscription/view/inscription.dart';
-import 'package:e_commerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
+import '../../../main_screen.dart';
+import '../../connexion/view/login.dart';
+import '../../inscription/view/inscription.dart';
+import '../../../components/button_components.dart';
+import '../../../components/space.dart';
+import '../../../components/text_components.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,49 +15,83 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: homeBg),
+      appBar: AppBar(backgroundColor: AppTheme.lightBackground, elevation: 0),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(left: 20, right: 20),
-          color: homeBg,
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          color: AppTheme.lightBackground,
+          height: ScreenUtil().screenHeight - 100.h,
+          width: ScreenUtil().screenWidth,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextComponents(txt: "Welcome", txtSize: 35, fw: FontWeight.bold),
-              TextComponents(txt: "ManMode Shoping House", txtSize: 18),
-              h(40),
-              Image.asset('assets/images/home.png', scale: 1.1),
-
-              h(40),
+              TextComponents(
+                txt: "Welcome",
+                txtSize: 35.sp,
+                fw: FontWeight.bold,
+                color: AppTheme.textPrimaryLight,
+              ),
+              TextComponents(
+                txt: "ManMode Shopping House",
+                txtSize: 16.sp,
+                color: AppTheme.textSecondaryLight,
+              ),
+              SizedBox(height: 40.h),
+              Container(
+                height: 200.h,
+                width: 200.w,
+                decoration: BoxDecoration(
+                  color: AppTheme.primaryColor.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(20.r),
+                ),
+                child: Icon(
+                  Icons.shopping_bag,
+                  size: 80.sp,
+                  color: AppTheme.primaryColor,
+                ),
+              ),
+              SizedBox(height: 40.h),
               InkWell(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Inscription()),
+                    MaterialPageRoute(
+                      builder: (context) => const Inscription(),
+                    ),
                   );
                 },
                 child: ButtonComponents(
-                  txtButton: 'sing up',
-                  buttonColor: mainColor,
+                  txtButton: 'Sign up',
+                  buttonColor: AppTheme.primaryColor,
                 ),
               ),
-              h(20),
+              SizedBox(height: 20.h),
               InkWell(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Login()),
+                    MaterialPageRoute(builder: (context) => const Login()),
                   );
                 },
                 child: ButtonComponents(
                   txtButton: 'Login',
-                  buttonColor: Colors.grey,
+                  buttonColor: AppTheme.grey4,
                 ),
               ),
-              h(20),
-              TextComponents(txt: 'Not thanks'),
+              SizedBox(height: 20.h),
+              InkWell(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MainScreen()),
+                  );
+                },
+                child: TextComponents(
+                  txt: 'Continue as Guest',
+                  color: AppTheme.primaryColor,
+                  fw: FontWeight.w600,
+                ),
+              ),
             ],
           ),
         ),

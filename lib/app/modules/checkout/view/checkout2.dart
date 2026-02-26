@@ -1,8 +1,12 @@
-import 'package:e_commerce/app/components/space.dart';
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/app/modules/checkout/controller/controller.dart';
-import 'package:e_commerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
+import '../../../components/button_components.dart';
+import '../../../components/form_components.dart';
+import '../../../components/space.dart';
+import '../../../components/text_components.dart';
+import '../controller/controller.dart';
 
 class Checkout2 extends StatefulWidget {
   const Checkout2({super.key});

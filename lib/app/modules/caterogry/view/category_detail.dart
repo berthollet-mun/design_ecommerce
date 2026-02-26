@@ -1,5 +1,5 @@
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/app/modules/productPage/controller/controller.dart';
+import 'package:ecommerce/app/modules/productPage/controller/controller.dart';
+import 'package:ecommerce/app/components/text_components.dart';
 import 'package:flutter/material.dart';
 
 class CategoryDetail extends StatefulWidget {

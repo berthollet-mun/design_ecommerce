@@ -1,10 +1,12 @@
-import 'package:e_commerce/app/components/space.dart';
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/app/modules/filter/view/filter.dart';
-import 'package:e_commerce/app/modules/productPage/controller/controller.dart';
-import 'package:e_commerce/app/panier/view/panier.dart';
-import 'package:e_commerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
+import '../../../components/space.dart';
+import '../../../components/text_components.dart';
+import '../../filter/view/filter.dart';
+import '../controller/controller.dart';
+import '../../../panier/view/panier.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({super.key});

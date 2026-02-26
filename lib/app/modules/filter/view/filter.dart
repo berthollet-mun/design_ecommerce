@@ -1,8 +1,10 @@
-import 'package:e_commerce/app/components/button_components.dart';
-import 'package:e_commerce/app/components/space.dart';
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../utils/theme.dart';
+import '../../../components/button_components.dart';
+import '../../../components/space.dart';
+import '../../../components/text_components.dart';
 
 class Filter extends StatefulWidget {
   const Filter({super.key});

@@ -1,6 +1,9 @@
-import 'package:e_commerce/app/components/text_components.dart';
-import 'package:e_commerce/app/modules/home/view/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../main_screen.dart';
+import '../../../components/text_components.dart';
+import '../../../../utils/theme.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -21,9 +24,9 @@ class _SplashState extends State<Splash> {
 
       // Vérifie que le widget est toujours monté (sinon erreur)
       if (context.mounted) {
-        Navigator.of(
-          context,
-        ).pushReplacement(MaterialPageRoute(builder: (_) => const HomePage()));
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const MainScreen()),
+        );
       }
     });
   }
@@ -34,13 +37,47 @@ class _SplashState extends State<Splash> {
       backgroundColor: Colors.white,
       body: Center(
         child: SizedBox(
-          height: 240,
-          width: 200,
+          height: 240.h,
+          width: 200.w,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/logo.png', scale: 1.2),
-              TextComponents(txt: 'ManMode', txtSize: 30, fw: FontWeight.bold),
-              TextComponents(txt: 'Fashion House', txtSize: 20),
+              Container(
+                height: 120.h,
+                width: 120.w,
+                decoration: BoxDecoration(
+                  color: AppTheme.primaryColor.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(20.r),
+                ),
+                child: Icon(
+                  Icons.shopping_bag,
+                  size: 60.sp,
+                  color: AppTheme.primaryColor,
+                ),
+              ),
+              SizedBox(height: 20.h),
+              TextComponents(
+                txt: 'ManMode',
+                txtSize: 30.sp,
+                fw: FontWeight.bold,
+                color: AppTheme.primaryColor,
+              ),
+              TextComponents(
+                txt: 'Fashion House',
+                txtSize: 16.sp,
+                color: AppTheme.grey4,
+              ),
+              SizedBox(height: 40.h),
+              SizedBox(
+                width: 40.w,
+                height: 40.h,
+                child: CircularProgressIndicator(
+                  strokeWidth: 3.w,
+                  valueColor: AlwaysStoppedAnimation<Color>(
+                    AppTheme.primaryColor,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
